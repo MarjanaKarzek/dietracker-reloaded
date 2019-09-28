@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                style="@style/AppTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                app:tabTextAppearance="@style/AppTabTextAppearance"
+                android:background="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/bg_title"
+                android:elevation="3dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/previous_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/ic_keyboard_arrow_left_black" />
+
+                <TextView
+                    android:id="@+id/date_label"
+                    style="@style/Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    tools:text="20. Februar 2018" />
+
+                <ImageButton
+                    android:id="@+id/next_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fab_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_fab_transparent"
+            android:visibility="gone" />
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/floating_action_button_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:fab_addButtonColorPressed="@color/colorAccent"
+            fab:fab_addButtonColorNormal="@color/colorAccent"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_icon="@drawable/ic_add_white"
+            fab:fab_labelStyle="@style/fabStyle">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_food"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_icon="@drawable/ic_add_white"
+                fab:fab_size="mini"
+                fab:fab_title="@string/fab_add_food" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_drink"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_icon="@drawable/ic_add_white"
+                fab:fab_size="mini"
+                fab:fab_title="@string/fab_add_drink" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_recipe"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                fab:fab_colorNormal="@color/colorAccent"
+                fab:fab_colorPressed="@color/colorAccent"
+                fab:fab_icon="@drawable/ic_add_white"
+                fab:fab_size="mini"
+                fab:fab_title="@string/fab_add_recipe" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    </RelativeLayout>
+
+    <include layout="@layout/snippet_loading_view" />
+
+</android.support.design.widget.CoordinatorLayout>

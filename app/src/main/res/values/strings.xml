@@ -1,3 +1,174 @@
 <resources>
-    <string name="app_name">DietRackerReloaded</string>
+    <string name="app_name">DietTracker</string>
+
+    <string name="welcome">Willkommen</string>
+    <string name="welcome_text">Datenbank wird vorbereitet…</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_diary">Tagebuch</string>
+    <string name="menu_cookbook">Kochbuch</string>
+    <string name="menu_Settings">Einstellungen</string>
+
+    <string name="grocery_list_title">Lebensmittel</string>
+    <string name="drink_list_title">Getränke</string>
+
+    <string name="generic_meal_grocery_list_placeholder">Füge über das "+" Lebensmittel zu dieser Mahlzeit hinzu.\n\nRezepte, welche Du für diese Mahlzeit als Favoriten markierst, werden Dir hier vorgeschlagen.</string>
+
+    <string name="fab_add_food">Lebensmittel</string>
+    <string name="fab_add_drink">Getränk</string>
+    <string name="fab_add_recipe">Rezept</string>
+
+    <string name="food_search_title">Lebensmittel</string>
+    <string name="food_search_hint">Lebensmittel durchsuchen</string>
+    <string name="food_search_placeholder">Markiere Lebensmittel als Favoriten, um sie hier schnell auszuwählen.</string>
+    <string name="food_search_query_without_result_placeholder">Es wurden keine Lebensmittel gefunden.</string>
+
+    <string name="drink_search_title">Getränke</string>
+    <string name="drink_search_hint">Getränke durchsuchen</string>
+    <string name="drink_search_placeholder">Markiere Getränke als Favoriten, um sie hier schnell auszuwählen.</string>
+    <string name="drink_search_query_without_result_placeholder">Es wurden keine Getränke gefunden.</string>
+
+    <string name="barcode_search_no_result">Dieses Produkt wurde in der Datenbank nicht gefunden.</string>
+    <string name="barcode_search_no_result_accept">OK</string>
+
+    <string name="recipe_search_title">Rezepte</string>
+    <string name="recipe_search_hint">Rezepte durchsuchen</string>
+    <string name="recipe_search_placeholder">Markiere Rezepte als Favoriten, um sie hier schnell auszuwählen.</string>
+    <string name="recipe_search_query_without_result_placeholder">Es wurden keine Rezepte gefunden.</string>
+
+    <string name="product_search_title">Produkte</string>
+    <string name="product_search_hint">Produkte durchsuchen</string>
+    <string name="product_search_placeholder">Markiere Produkte als Favoriten, um sie hier schnell auszuwählen.</string>
+    <string name="product_search_query_without_result_placeholder">Es wurden keine Produkte gefunden.</string>
+
+    <string name="calories">Kalorien</string>
+    <string name="proteins">Proteine</string>
+    <string name="carbs">Kohlenhydrate</string>
+    <string name="fats">Fette</string>
+
+    <string name="placeholder_amount_solid_grocery">100</string>
+
+    <string name="allergen_warning">Dieses Produkt enthält: </string>
+    <string name="button_add">Hinzufügen</string>
+
+    <string name="swipe_action_move">verschieben</string>
+    <string name="swipe_action_edit">bearbeiten</string>
+    <string name="swipe_action_delete">löschen</string>
+
+    <string name="dialog_move_to">Verschieben nach </string>
+    <string name="dialog_action_dismiss">Abbrechen</string>
+    <string name="dialog_action_move">Verschieben</string>
+    <string name="permission_grand_camera_for_barcode_scanner">Erlaube den Zugriff auf die Kamera, um den Barcode Scanner zu verwendet.</string>
+    <string name="permission_grand_camera_for_recipe">Erlaube den Zugriff auf die Kamera, um ein Foto Deines Rezepts hinzuzufügen.</string>
+    <string name="drink_placeholder">Hattes Du heute etwas anderes außer Wasser? Nutze das + um Getränke hinzuzufügen.</string>
+    <string name="save_button">Speichern</string>
+    <string name="button_delete">Löschen</string>
+
+    <string name="settings_nutrition_title">Ernährung</string>
+    <string name="settings_calories_subtitle">Kalorien: </string>
+    <string name="settings_proteins_subtitle">Proteinen: </string>
+    <string name="settings_carbs_subtitle">Kohlenhydraten: </string>
+    <string name="settings_fats_subtitle">Fetten: </string>
+    <string name="settings_daily_required_amount">Täglicher Bedarf an …</string>
+    <string name="settings_liquids_title">Flüssigkeitshaushalt</string>
+    <string name="settings_unit_gramm">g</string>
+    <string name="settings_unit_milliliters">ml</string>
+    <string name="settings_liquids_subtitle">Täglicher Bedarf</string>
+    <string name="settings_volume_subtitle">Volumen für …</string>
+    <string name="settings_volume_bottle_title">Flaschen: </string>
+    <string name="settings_volume_glasses_title">Gläser: </string>
+    <string name="settings_meals_title">Mahlzeiten</string>
+    <string name="settings_meals_add">+ Hinzufügen</string>
+    <string name="settings_allergies_title">Allergien</string>
+    <string name="settings_data_title">Datenauswertung</string>
+    <string name="settings_data_calories">Kalorien</string>
+    <string name="settings_data_macro_details">Makronährstoffe</string>
+    <string name="settings_start_screen_title">Startseite</string>
+    <string name="settings_start_screen_favorite_recipes_area">Favorisierte Rezepte</string>
+    <string name="settings_start_screen_liquid_area">Getränke Erfassung</string>
+    <string name="settings_meal_name_hint">Name der Mahlzeit</string>
+
+    <string name="error_message_only_ten_supported_meals">Mehr als 10 Mahlzeiten werden nicht unterstützt</string>
+    <string name="no_allergens_set_placeholder">Verwalte Deine Allergene über das Stift Symbol</string>
+    <string name="dialog_action_save">Speichern</string>
+    <string name="dialog_edit_meal_instructions">In welchem Zeitraum nimmst du diese Mahlzeit zu dir?</string>
+
+    <string name="double_point">:</string>
+    <string name="o_clock">Uhr</string>
+    <string name="beginning">Beginn</string>
+    <string name="end">Ende</string>
+    <string name="_00">00</string>
+
+    <string name="cookbook_placeholder">Füge über das + neue Rezepte hinzu</string>
+    <string name="menu_item_recipe_filter_title">Recipe Filter</string>
+    <string name="menu_item_recipe_sort_title">Recipe Sort</string>
+    <string name="recipe_title_hint">Rezept Titel</string>
+    <string name="toolbar_photo_action_title">Photo</string>
+    <string name="recipe_man_ingredient_title">Zutaten für</string>
+    <string name="recipe_man_portions">Portion/en</string>
+    <string name="_1">1</string>
+    <string name="add_ingredient_action">+ Hinzufügen</string>
+    <string name="_100">100</string>
+    <string name="add_ingredient_product_name">Produktname</string>
+    <string name="dialog_action_add">Hinzufügen</string>
+    <string name="error_message_missing_product_name">Bitte Produkt Namen angeben</string>
+    <string name="recipe_preparation_steps_title">Zubereitung</string>
+    <string name="add_preparation_step_description">Beschreibung</string>
+    <string name="error_message_missing_preparation_step_description">Bitte Beschreibung angeben</string>
+    <string name="recipe_meals_title">Mahlzeiten</string>
+    <string name="no_meals_selected_placeholder">Verwalte Mahlzeiten für dieses Rezept über das Stift Symbol</string>
+    <string name="button_add_recipe">Speichern und Zutaten erkennen</string>
+    <string name="error_message_missing_recipe_title">Bitte füge einen Titel hinzu</string>
+    <string name="error_message_missing_ingredient">Bitte füge mindestens eine Zutat hinzu</string>
+    <string name="error_message_unknown_error">Ein unbekannter Fehler inst aufgetreten</string>
+    <string name="dialog_message_confirm_recipe_deletion">Bist Du Dir sicher, dass Du dieses Rezept löschen möchtest?</string>
+    <string name="dialog_message_confirm_meal_deletion">Bist Du Dir sicher, dass Du diese Mahlzeit löschen möchtest?</string>
+    <string name="dialog_action_delete">Löschen</string>
+
+    <string name="recipe_details_ingredients_title">Zutaten für %1$s Portion/en</string>
+    <string name="per_portion">pro Portion</string>
+    <string name="button_reset_checkboxes">Auswahl aufheben</string>
+
+    <string name="filter_options_dialog_title">Filtern nach …</string>
+    <string name="sort_options_dialog_title">Sortieren nach …</string>
+    <string name="radio_button_title_asc">Titel (A-Z)</string>
+    <string name="radio_button_title_desc">Titel (Z-A)</string>
+    <string name="radio_button_portions_asc">Portionen (Aufsteigend)</string>
+    <string name="radio_button_portions_desc">Portionen (Absteigend)</string>
+    <string name="radio_button_meals_asc">Mahlzeiten (A-Z)</string>
+    <string name="radio_button_meals_desc">Mahlzeiten (Z-A)</string>
+    <string name="add_portion_to_diary_instructions">Portion hinzufügen zu</string>
+    <string name="success_message_portion_added">Portion hinzugefügt</string>
+    <string name="grocery_search_barcode_scan_title">Barcode_Scanner</string>
+    <string name="menu_item_favorite">Favorite</string>
+    <string name="menu_item_edit">Edit</string>
+    <string name="error_message_not_enough_ingredients_left">Eine Zutat muss im Rezept verbleiben</string>
+    <string name="fab_add_food_generic">Lebensmittel erfassen</string>
+    <string name="fab_add_drink_generic">Getränk erfassen</string>
+    <string name="fab_add_recipe_generic">Rezept erfassen</string>
+    <string name="favorite_recipes_home_title">Deine Favoriten zum %1$s:</string>
+    <string name="generic_drinks_max_value">von %1$s ml</string>
+    <string name="dialog_add_meal_title_hint">Name der Mahlzeit</string>
+    <string name="error_message_missing_meal_title">Bitte gib einen Namen für die Mahlzeit an</string>
+    <string name="error_message_invalid_start_end_time">Die Startzeit muss vor der Endzeit liegen</string>
+    <string name="button_close_text">Schließen</string>
+    <string name="onboarding_text_ingredient_search" >Über den Button +Hinzufügen, kannst Du, ohne lange zu Suchen, Zutaten und Mengen angeben.\n\nDie tatsächlichen Produkte werden nach dem Speichern aus der Datenbank automatisch gelesen!</string>
+    <string name="onboarding_text_display_settings">Mach diesen Tracker zu Deinem Tracker.\n\nLege Deinen Tagesbedarf fest und bestimme selbst, welche Informationen zu Deiner Ernährung angezeigt werden sollen.</string>
+    <string name="onboarding_text_support_options">Du willst, dass diese App für Dich mitdenkt?\n\nTrage Deine Allergien in den Einstellungen ein und lege Deine favorisierten Rezepte im Kochbuch fest, um weitere Informationen im Tagebuch zu erhalten.</string>
+    <string name="onboarding_text_slide_options">Wische über Einträge nach links um weitere Optionen auswählen zu können.</string>
+    <string name="onboarding_text_welcome">Hallo,\n\nschön, dass Du da bist!\n\nLass uns gemeinsam Deine Ernährung gestalten.</string>
+    <string name="lets_go_button">Los geht\'s!</string>
+    <string name="save_changes_button">Änderungen annehmen</string>
+    <string name="automated_ingredient_search_title">Zutatenerkennung</string>
+    <string name="dialog_message_automated_ingredient_search_success">Das Rezept wurde erfolgreich angelegt</string>
+    <string name="dialog_action_ok">ok</string>
+    <string name="fail_reason_description_wrong_unit">Diese Einheit ist für das gefundene Lebensmittel nicht verfügbar</string>
+    <string name="fail_reason_description_grocery_not_found">Kein Lebensmittel mit diesem Namen gefunden</string>
+    <string name="dialog_message_automated_ingredient_search_unsuccess">Nicht alle Zutaten konnten automatisch erkannt werden</string>
+
+    <string name="error_message_lower_bound_exceded">Der Wert kann nicht kleiner sein als %1$s</string>
+    <string name="error_message_upper_bound_exceded">Der Wert kann nicht größer sein als %1$s</string>
+    <string name="value_one">1</string>
+    <string name="value_one_hundret">100</string>
+
 </resources>

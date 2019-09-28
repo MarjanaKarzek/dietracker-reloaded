@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp">
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="true">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circle_progress_bar_dinks_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            app:cpb_background_progressbar_color="@color/colorAccentLight"
+            app:cpb_background_progressbar_width="3dp"
+            app:cpb_progress="0"
+            app:cpb_progressbar_color="@color/colorAccent"
+            app:cpb_progressbar_width="6dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/circle_progress_bar_drinks_value"
+                style="@style/Subtitle"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:isScrollContainer="false"
+                android:gravity="center"
+                android:textColor="@color/textPrimary"
+                android:imeOptions="actionDone"
+                android:nextFocusUp="@id/circle_progress_bar_drinks_value"
+                android:nextFocusLeft="@id/circle_progress_bar_drinks_value"
+                android:focusable="true"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                tools:text="50" />
+
+            <TextView
+                android:id="@+id/drinks_max_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/generic_drinks_max_value"
+                android:textColor="@color/textSecondary"
+                style="@style/Caption"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/add_bottle"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:src="@drawable/ic_bottle_primary_text" />
+
+    <ImageButton
+        android:id="@+id/add_glass"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:src="@drawable/ic_glass_primary_text" />
+
+</LinearLayout>
