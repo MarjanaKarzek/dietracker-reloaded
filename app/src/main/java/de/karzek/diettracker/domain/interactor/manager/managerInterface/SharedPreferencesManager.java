@@ -1,16 +1,6 @@
 package de.karzek.diettracker.domain.interactor.manager.managerInterface;
 
-import android.support.annotation.IntDef;
-
 import java.util.ArrayList;
-import java.util.List;
-
-import de.karzek.diettracker.domain.common.BaseObservableUseCase;
-import de.karzek.diettracker.domain.common.BaseUseCase;
-import de.karzek.diettracker.presentation.model.AllergenDisplayModel;
-import io.reactivex.disposables.Disposable;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 /**
  * Created by MarjanaKarzek on 27.05.2018.

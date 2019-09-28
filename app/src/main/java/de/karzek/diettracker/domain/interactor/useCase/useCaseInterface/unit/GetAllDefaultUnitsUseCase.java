@@ -1,6 +1,6 @@
 package de.karzek.diettracker.domain.interactor.useCase.useCaseInterface.unit;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.List;
 

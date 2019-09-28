@@ -1,8 +1,8 @@
 package de.karzek.diettracker.presentation.common;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatDialogFragment;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDialogFragment;
 
 import de.karzek.diettracker.presentation.TrackerApplication;
 import io.reactivex.disposables.CompositeDisposable;

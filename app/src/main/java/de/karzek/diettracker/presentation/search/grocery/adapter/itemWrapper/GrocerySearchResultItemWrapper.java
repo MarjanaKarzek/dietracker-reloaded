@@ -1,6 +1,6 @@
 package de.karzek.diettracker.presentation.search.grocery.adapter.itemWrapper;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import de.karzek.diettracker.presentation.model.GroceryDisplayModel;
 import lombok.Value;

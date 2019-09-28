@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.diary.meal.adapter.favoriteRecipeList;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.diary.meal.adapter.favoriteRecipeList.viewHolder.FavoriteRecipeViewHolder;
 import de.karzek.diettracker.presentation.model.RecipeDisplayModel;
 
@@ -31,7 +34,9 @@ public class FavoriteRecipeListAdapter extends RecyclerView.Adapter<RecyclerView
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new FavoriteRecipeViewHolder(parent, onItemClickListener);
+        return new FavoriteRecipeViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_diary_favorite_recipe, parent, false
+        ), onItemClickListener);
     }
 
     @Override

@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.diary.meal.adapter.diaryEntryList;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.diary.meal.adapter.diaryEntryList.viewHolder.DiaryEntryViewHolder;
 import de.karzek.diettracker.presentation.model.DiaryEntryDisplayModel;
 
@@ -40,7 +43,9 @@ public class DiaryEntryListAdapter extends RecyclerView.Adapter<DiaryEntryViewHo
     @NonNull
     @Override
     public DiaryEntryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new DiaryEntryViewHolder(parent, onItemClickListener, onItemDeleteListener, onItemMoveListener, onItemEditListener);
+        return new DiaryEntryViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_diary_grocery, parent, false
+        ), onItemClickListener, onItemDeleteListener, onItemMoveListener, onItemEditListener);
     }
 
     @Override

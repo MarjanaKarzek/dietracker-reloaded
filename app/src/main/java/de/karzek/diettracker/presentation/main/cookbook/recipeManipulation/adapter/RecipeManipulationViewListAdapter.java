@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.itemWrapper.RecipeManipulationViewItemWrapper;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationIngredientItemViewHolder;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationIngredientsTitleAndPortionsViewHolder;
@@ -89,29 +92,53 @@ public class RecipeManipulationViewListAdapter extends RecyclerView.Adapter<Recy
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case RecipeManipulationViewItemWrapper.ItemType.PHOTO_VIEW:
-                return new RecipeManipulationPhotoViewHolder(parent, onDeleteImageClickListener);
+                return new RecipeManipulationPhotoViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_photo, parent, false
+                ), onDeleteImageClickListener);
             case RecipeManipulationViewItemWrapper.ItemType.INGREDIENTS_TITLE_AND_PORTIONS_VIEW:
-                return new RecipeManipulationIngredientsTitleAndPortionsViewHolder(parent, onPortionChangedListener);
+                return new RecipeManipulationIngredientsTitleAndPortionsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_ingredients_title_and_portions, parent, false
+                ), onPortionChangedListener);
             case RecipeManipulationViewItemWrapper.ItemType.MANUAL_INGREDIENT_ITEM:
-                return new RecipeManipulationManualIngredientItemViewHolder(parent, onDeleteManualIngredientClickListener, onManualIngredientClickedListener);
+                return new RecipeManipulationManualIngredientItemViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_ingredient, parent, false
+                ), onDeleteManualIngredientClickListener, onManualIngredientClickedListener);
             case RecipeManipulationViewItemWrapper.ItemType.INGREDIENT_ITEM:
-                return new RecipeManipulationIngredientItemViewHolder(parent, onDeleteIngredientClickListener, onIngredientClickListener);
+                return new RecipeManipulationIngredientItemViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_ingredient, parent, false
+                ), onDeleteIngredientClickListener, onIngredientClickListener);
             case RecipeManipulationViewItemWrapper.ItemType.INGREDIENT_ITEM_ADD_VIEW:
-                return new RecipeManipulationItemAddViewHolder(parent, onAddManualIngredientClickListener, onStartGrocerySearchClickListener, onStartBarcodeScanClickListener);
+                return new RecipeManipulationItemAddViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_ingredient_add, parent, false
+                ), onAddManualIngredientClickListener, onStartGrocerySearchClickListener, onStartBarcodeScanClickListener);
             case RecipeManipulationViewItemWrapper.ItemType.PREPARATION_STEPS_TITLE_VIEW:
-                return new RecipeManipulationPreparationStepTitleViewHolder(parent);
+                return new RecipeManipulationPreparationStepTitleViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_preparation_step_title, parent, false
+                ));
             case RecipeManipulationViewItemWrapper.ItemType.PREPARATION_STEP_ITEM:
-                return new RecipeManipulationPreparationStepItemViewHolder(parent, onDeletePreparationStepClickedListener, onEditPreparationStepFinishedListener);
+                return new RecipeManipulationPreparationStepItemViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_preparation_step, parent, false
+                ), onDeletePreparationStepClickedListener, onEditPreparationStepFinishedListener);
             case RecipeManipulationViewItemWrapper.ItemType.PREPARATION_STEP_ITEM_ADD_VIEW:
-                return new RecipeManipulationPreparationStepItemAddViewHolder(parent, onAddPreparationStepClickedListener);
+                return new RecipeManipulationPreparationStepItemAddViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_preparation_step_add, parent, false
+                ), onAddPreparationStepClickedListener);
             case RecipeManipulationViewItemWrapper.ItemType.MEALS_TITLE_VIEW:
-                return new RecipeManipulationMealsTitleViewHolder(parent);
+                return new RecipeManipulationMealsTitleViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_meals_title, parent, false
+                ));
             case RecipeManipulationViewItemWrapper.ItemType.MEAL_LIST:
-                return new RecipeManipulationMealsViewHolder(parent, onEditMealsClickedListener);
+                return new RecipeManipulationMealsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_meal_list, parent, false
+                ), onEditMealsClickedListener);
             case RecipeManipulationViewItemWrapper.ItemType.RECIPE_SAVE_VIEW:
-                return new RecipeManipulationRecipeSaveViewHolder(parent, onSaveRecipeClickedListener);
+                return new RecipeManipulationRecipeSaveViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_save, parent, false
+                ), onSaveRecipeClickedListener);
             case RecipeManipulationViewItemWrapper.ItemType.RECIPE_DELETE_VIEW:
-                return new RecipeManipulationRecipeDeleteViewHolder(parent, onDeleteRecipeClickedListener);
+                return new RecipeManipulationRecipeDeleteViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_man_delete, parent, false
+                ), onDeleteRecipeClickedListener);
         }
 
         return null;

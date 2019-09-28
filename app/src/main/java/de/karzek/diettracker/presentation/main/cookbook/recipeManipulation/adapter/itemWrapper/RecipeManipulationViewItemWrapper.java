@@ -1,14 +1,12 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.itemWrapper;
 
 import android.graphics.Bitmap;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import de.karzek.diettracker.presentation.model.GroceryDisplayModel;
 import de.karzek.diettracker.presentation.model.IngredientDisplayModel;
-import de.karzek.diettracker.presentation.model.ManualIngredientDisplayModel;
 import de.karzek.diettracker.presentation.model.MealDisplayModel;
 import de.karzek.diettracker.presentation.model.PreparationStepDisplayModel;
 import lombok.Value;
@@ -51,12 +49,12 @@ public class RecipeManipulationViewItemWrapper {
     }
 
     @ItemType
-    int type;
-    Bitmap image;
-    Float portions;
-    IngredientDisplayModel ingredientDisplayModel;
-    PreparationStepDisplayModel preparationStepDisplayModel;
-    List<MealDisplayModel> meals;
+    public int type;
+    public Bitmap image;
+    public Float portions;
+    public IngredientDisplayModel ingredientDisplayModel;
+    public PreparationStepDisplayModel preparationStepDisplayModel;
+    public List<MealDisplayModel> meals;
 
     public RecipeManipulationViewItemWrapper(@ItemType int type) {
         this.type = type;

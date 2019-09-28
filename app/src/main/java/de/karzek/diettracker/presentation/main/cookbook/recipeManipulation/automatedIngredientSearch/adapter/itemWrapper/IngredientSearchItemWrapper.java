@@ -1,15 +1,8 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.automatedIngredientSearch.adapter.itemWrapper;
 
-import android.graphics.Bitmap;
-import android.support.annotation.IntDef;
-
-import java.util.ArrayList;
-import java.util.List;
+import androidx.annotation.IntDef;
 
 import de.karzek.diettracker.presentation.model.IngredientDisplayModel;
-import de.karzek.diettracker.presentation.model.ManualIngredientDisplayModel;
-import de.karzek.diettracker.presentation.model.MealDisplayModel;
-import de.karzek.diettracker.presentation.model.PreparationStepDisplayModel;
 import lombok.Value;
 
 /**
@@ -33,9 +26,9 @@ public class IngredientSearchItemWrapper {
     }
 
     @ItemType
-    int type;
-    IngredientDisplayModel ingredientDisplayModel;
-    int failReason;
+    public int type;
+    public IngredientDisplayModel ingredientDisplayModel;
+    public int failReason;
 
     public IngredientSearchItemWrapper(@ItemType int type, IngredientDisplayModel displayModel) {
         this.type = type;

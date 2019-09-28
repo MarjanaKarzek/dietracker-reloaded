@@ -16,10 +16,10 @@ import lombok.Value;
 @Value
 @AllArgsConstructor
 public class UnitDisplayModel implements Parcelable {
-    private int id;
-    private String name;
-    private int multiplier;
-    private int type;
+    public int id;
+    public String name;
+    public int multiplier;
+    public int type;
 
     protected UnitDisplayModel(Parcel in) {
         id = in.readInt();

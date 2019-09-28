@@ -1,12 +1,14 @@
 package de.karzek.diettracker.presentation.search.recipe.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.karzek.diettracker.presentation.main.cookbook.adapter.viewHolder.RecipeCookbookSearchResultViewHolder;
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.model.RecipeDisplayModel;
 import de.karzek.diettracker.presentation.search.recipe.adapter.viewHolder.RecipeSearchResultViewHolder;
 
@@ -17,7 +19,7 @@ import de.karzek.diettracker.presentation.search.recipe.adapter.viewHolder.Recip
  * @version 1.0
  * @date 30.05.2018
  */
-public class RecipeSearchResultListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class RecipeSearchResultListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private RecipeSearchResultViewHolder.OnRecipeItemClickedListener onRecipeItemClickedListener;
     private RecipeSearchResultViewHolder.OnRecipeAddPortionClickedListener onRecipeAddPortionClickedListener;
@@ -25,7 +27,7 @@ public class RecipeSearchResultListAdapter extends RecyclerView.Adapter<Recycler
     private ArrayList<RecipeDisplayModel> list;
 
     public RecipeSearchResultListAdapter(RecipeSearchResultViewHolder.OnRecipeItemClickedListener onRecipeItemClickedListener,
-                                         RecipeSearchResultViewHolder.OnRecipeAddPortionClickedListener onRecipeAddPortionClickedListener){
+                                         RecipeSearchResultViewHolder.OnRecipeAddPortionClickedListener onRecipeAddPortionClickedListener) {
         list = new ArrayList<>();
 
         this.onRecipeItemClickedListener = onRecipeItemClickedListener;
@@ -35,7 +37,9 @@ public class RecipeSearchResultListAdapter extends RecyclerView.Adapter<Recycler
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RecipeSearchResultViewHolder(parent, onRecipeItemClickedListener, onRecipeAddPortionClickedListener);
+        return new RecipeSearchResultViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_recipe_search_result, parent, false
+        ), onRecipeItemClickedListener, onRecipeAddPortionClickedListener);
     }
 
     @Override
@@ -48,7 +52,7 @@ public class RecipeSearchResultListAdapter extends RecyclerView.Adapter<Recycler
         return list.size();
     }
 
-    public void setList(ArrayList<RecipeDisplayModel> list){
+    public void setList(ArrayList<RecipeDisplayModel> list) {
         this.list = list;
         notifyDataSetChanged();
     }

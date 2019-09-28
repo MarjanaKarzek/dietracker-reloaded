@@ -146,8 +146,8 @@ class Dialog(
             dismiss()
         }
         negative_action.setOnClickListener {
-            dismiss()
             listener.onNegativeButtonClicked()
+            dismiss()
         }
         setOnCancelListener { listener.onNegativeButtonClicked() }
     }
@@ -161,7 +161,7 @@ class Dialog(
 
     companion object {
         interface DialogButtonListener {
-            fun onPositiveButtonClicked()
+            fun onPositiveButtonClicked() {}
             fun onNegativeButtonClicked() {}
         }
     }

@@ -16,8 +16,8 @@ import lombok.Value;
 @Value
 @AllArgsConstructor
 public class AllergenDisplayModel implements Parcelable {
-    private int id;
-    private String name;
+    public int id;
+    public String name;
 
     protected AllergenDisplayModel(Parcel in) {
         id = in.readInt();

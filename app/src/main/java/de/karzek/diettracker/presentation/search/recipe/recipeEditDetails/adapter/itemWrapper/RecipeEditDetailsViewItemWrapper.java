@@ -1,7 +1,7 @@
 package de.karzek.diettracker.presentation.search.recipe.recipeEditDetails.adapter.itemWrapper;
 
 import android.graphics.Bitmap;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,14 +44,14 @@ public class RecipeEditDetailsViewItemWrapper {
     @ItemType
     int type;
 
-    Bitmap image;
-    IngredientDisplayModel ingredientDisplayModel;
-    List<MealDisplayModel> meals;
-    int selectedMeal;
-    String date;
-    float portions;
-    HashMap<String, Long> maxValues;
-    HashMap<String, Float> values;
+    public Bitmap image;
+    public IngredientDisplayModel ingredientDisplayModel;
+    public List<MealDisplayModel> meals;
+    public int selectedMeal;
+    public String date;
+    public float portions;
+    public HashMap<String, Long> maxValues;
+    public HashMap<String, Float> values;
 
     public RecipeEditDetailsViewItemWrapper(@ItemType int type) {
         this.type = type;

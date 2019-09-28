@@ -19,7 +19,7 @@ import timber.log.Timber;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class ManualIngredientDisplayModel extends IngredientDisplayModel implements Parcelable{
-    private String groceryQuery;
+    public String groceryQuery;
 
     public ManualIngredientDisplayModel(int id, GroceryDisplayModel groceryDisplayModel, float amount, UnitDisplayModel unit, String groceryQuery){
         super(id, groceryDisplayModel, amount, unit);

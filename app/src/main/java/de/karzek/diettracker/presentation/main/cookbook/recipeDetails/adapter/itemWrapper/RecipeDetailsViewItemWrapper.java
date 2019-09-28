@@ -1,7 +1,7 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeDetails.adapter.itemWrapper;
 
 import android.graphics.Bitmap;
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,13 +45,13 @@ public class RecipeDetailsViewItemWrapper {
     @ItemType
     int type;
 
-    Bitmap image;
-    String title;
-    IngredientDisplayModel ingredientDisplayModel;
-    PreparationStepDisplayModel preparationStepDisplayModel;
-    List<MealDisplayModel> meals;
-    HashMap<String, Long> maxValues;
-    HashMap<String, Float> values;
+    public Bitmap image;
+    public String title;
+    public IngredientDisplayModel ingredientDisplayModel;
+    public PreparationStepDisplayModel preparationStepDisplayModel;
+    public List<MealDisplayModel> meals;
+    public HashMap<String, Long> maxValues;
+    public HashMap<String, Float> values;
 
     public RecipeDetailsViewItemWrapper(@ItemType int type, Bitmap image) {
         this.type = type;

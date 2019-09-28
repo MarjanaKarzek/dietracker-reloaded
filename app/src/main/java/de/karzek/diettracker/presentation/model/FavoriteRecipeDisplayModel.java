@@ -11,6 +11,6 @@ import lombok.Value;
  */
 @Value
 public class FavoriteRecipeDisplayModel {
-    private int id;
-    private RecipeDisplayModel recipe;
+    public int id;
+    public RecipeDisplayModel recipe;
 }

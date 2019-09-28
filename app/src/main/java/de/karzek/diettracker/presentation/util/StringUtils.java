@@ -1,14 +1,5 @@
 package de.karzek.diettracker.presentation.util;
 
-import android.content.Context;
-import android.support.v4.view.ViewCompat;
-import android.util.TypedValue;
-import android.widget.TextView;
-
-import com.getbase.floatingactionbutton.FloatingActionsMenu;
-
-import de.karzek.diettracker.presentation.custom.CustomBottomNavigationView;
-
 /**
  * Created by MarjanaKarzek on 12.05.2018.
  *

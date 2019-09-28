@@ -1,6 +1,6 @@
 package de.karzek.diettracker.presentation.search.grocery;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.ArrayList;
 

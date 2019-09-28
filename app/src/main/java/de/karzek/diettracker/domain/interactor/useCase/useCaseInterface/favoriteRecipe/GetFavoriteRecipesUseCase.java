@@ -1,12 +1,11 @@
 package de.karzek.diettracker.domain.interactor.useCase.useCaseInterface.favoriteRecipe;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import java.util.List;
 
 import de.karzek.diettracker.domain.common.BaseObservableUseCase;
 import de.karzek.diettracker.domain.common.BaseUseCase;
-import de.karzek.diettracker.domain.model.FavoriteGroceryDomainModel;
 import de.karzek.diettracker.domain.model.FavoriteRecipeDomainModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

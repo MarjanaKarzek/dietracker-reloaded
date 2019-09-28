@@ -1,11 +1,12 @@
 package de.karzek.diettracker.presentation.common;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
+import androidx.fragment.app.Fragment;
 
 import de.karzek.diettracker.presentation.TrackerApplication;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
 
 /**
  * Created by MarjanaKarzek on 12.05.2018.
@@ -14,7 +15,7 @@ import io.reactivex.disposables.Disposable;
  * @version 1.0
  * @date 12.05.2018
  */
-public abstract class BaseFragment extends android.support.v4.app.Fragment {
+public abstract class BaseFragment extends Fragment {
 
     CompositeDisposable compositeDisposable = new CompositeDisposable();
 

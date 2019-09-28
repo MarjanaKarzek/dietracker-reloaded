@@ -1,14 +1,16 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.dialog.editMeals.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.dialog.editMeals.adapter.viewHolder.MealViewHolder;
-import de.karzek.diettracker.presentation.model.AllergenDisplayModel;
 import de.karzek.diettracker.presentation.model.MealDisplayModel;
 
 /**
@@ -33,7 +35,9 @@ public class EditMealsListAdapter extends RecyclerView.Adapter<MealViewHolder> {
     @NonNull
     @Override
     public MealViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MealViewHolder(parent, onItemCheckedChangeListener);
+        return new MealViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_dialog_checkbox, parent, false
+        ), onItemCheckedChangeListener);
     }
 
     @Override

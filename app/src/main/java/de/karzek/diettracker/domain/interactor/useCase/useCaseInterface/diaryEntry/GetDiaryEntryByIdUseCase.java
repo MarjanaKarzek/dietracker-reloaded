@@ -1,8 +1,6 @@
 package de.karzek.diettracker.domain.interactor.useCase.useCaseInterface.diaryEntry;
 
-import android.support.annotation.IntDef;
-
-import java.util.List;
+import androidx.annotation.IntDef;
 
 import de.karzek.diettracker.domain.common.BaseObservableUseCase;
 import de.karzek.diettracker.domain.common.BaseUseCase;

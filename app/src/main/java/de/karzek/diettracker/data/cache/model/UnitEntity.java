@@ -1,6 +1,6 @@
 package de.karzek.diettracker.data.cache.model;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

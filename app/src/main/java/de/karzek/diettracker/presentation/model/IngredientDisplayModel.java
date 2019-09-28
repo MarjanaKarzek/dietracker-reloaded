@@ -16,10 +16,10 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class IngredientDisplayModel implements Parcelable {
-    private int id;
-    private GroceryDisplayModel grocery;
-    private float amount;
-    private UnitDisplayModel unit;
+    public int id;
+    public GroceryDisplayModel grocery;
+    public float amount;
+    public UnitDisplayModel unit;
 
     public IngredientDisplayModel() {
         id = -1;

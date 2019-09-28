@@ -1,24 +1,14 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.automatedIngredientSearch.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.itemWrapper.RecipeManipulationViewItemWrapper;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationIngredientItemViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationIngredientsTitleAndPortionsViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationItemAddViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationManualIngredientItemViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationMealsTitleViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationMealsViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationPhotoViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationPreparationStepItemAddViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationPreparationStepItemViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationPreparationStepTitleViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationRecipeDeleteViewHolder;
-import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.adapter.viewHolder.RecipeManipulationRecipeSaveViewHolder;
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.automatedIngredientSearch.adapter.itemWrapper.IngredientSearchItemWrapper;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.automatedIngredientSearch.adapter.viewHolder.IngredientSearchFailedViewHolder;
 import de.karzek.diettracker.presentation.main.cookbook.recipeManipulation.automatedIngredientSearch.adapter.viewHolder.IngredientSearchFoundViewHolder;
@@ -54,11 +44,17 @@ public class IngredientSearchListAdapter extends RecyclerView.Adapter<RecyclerVi
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case IngredientSearchItemWrapper.ItemType.LOADING_INGREDIENT:
-                return new IngredientSearchLoadingViewHolder(parent);
+                return new IngredientSearchLoadingViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_ingredient_search_loading, parent, false
+                ));
             case IngredientSearchItemWrapper.ItemType.FOUND_INGREDIENT:
-                return new IngredientSearchFoundViewHolder(parent);
+                return new IngredientSearchFoundViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_ingredient_search_found, parent, false
+                ));
             case IngredientSearchItemWrapper.ItemType.FAILED_INGREDIENT:
-                return new IngredientSearchFailedViewHolder(parent, onStartGrocerySearchClickListener, onStartBarcodeScanClickListener, onDeleteIngredientClickListener);
+                return new IngredientSearchFailedViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_ingredient_search_failed, parent, false
+                ), onStartGrocerySearchClickListener, onStartBarcodeScanClickListener, onDeleteIngredientClickListener);
         }
 
         return null;

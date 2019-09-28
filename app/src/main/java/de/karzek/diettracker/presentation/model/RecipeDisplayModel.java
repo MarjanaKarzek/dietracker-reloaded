@@ -21,13 +21,13 @@ import lombok.Value;
 @Data
 @AllArgsConstructor
 public class RecipeDisplayModel implements Parcelable {
-    private int id;
-    private String title;
-    private byte[] photo;
-    private float portions;
-    private ArrayList<IngredientDisplayModel> ingredients;
-    private ArrayList<PreparationStepDisplayModel> steps;
-    private ArrayList<MealDisplayModel> meals;
+    public int id;
+    public String title;
+    public byte[] photo;
+    public float portions;
+    public ArrayList<IngredientDisplayModel> ingredients;
+    public ArrayList<PreparationStepDisplayModel> steps;
+    public ArrayList<MealDisplayModel> meals;
 
     protected RecipeDisplayModel(Parcel in) {
         id = in.readInt();

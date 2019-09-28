@@ -1,19 +1,11 @@
 package de.karzek.diettracker.presentation.search.grocery.barcodeScanner;
 
-import android.support.annotation.IntDef;
+import androidx.annotation.IntDef;
 
 import com.google.zxing.Result;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import de.karzek.diettracker.presentation.common.BasePresenter;
 import de.karzek.diettracker.presentation.common.BaseView;
-import de.karzek.diettracker.presentation.model.DiaryEntryDisplayModel;
-import de.karzek.diettracker.presentation.model.GroceryDisplayModel;
-import de.karzek.diettracker.presentation.model.MealDisplayModel;
-import de.karzek.diettracker.presentation.model.ServingDisplayModel;
-import de.karzek.diettracker.presentation.model.UnitDisplayModel;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 /**

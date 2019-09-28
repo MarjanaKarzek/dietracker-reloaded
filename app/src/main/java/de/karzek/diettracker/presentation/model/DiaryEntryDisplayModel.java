@@ -11,12 +11,12 @@ import lombok.Value;
  */
 @Value
 public class DiaryEntryDisplayModel {
-    private int id;
-    private MealDisplayModel meal;
-    private float amount;
-    private UnitDisplayModel unit;
-    private GroceryDisplayModel grocery;
-    private String date;
+    public int id;
+    public MealDisplayModel meal;
+    public float amount;
+    public UnitDisplayModel unit;
+    public GroceryDisplayModel grocery;
+    public String date;
 
     public DiaryEntryDisplayModel(int id, MealDisplayModel meal, float amount, UnitDisplayModel unit, GroceryDisplayModel grocery, String date){
         this.id = id;

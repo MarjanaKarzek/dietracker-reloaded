@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.settings.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.settings.adapter.viewHolder.SettingsMealViewHolder;
 import de.karzek.diettracker.presentation.model.MealDisplayModel;
 
@@ -35,7 +38,9 @@ public class SettingsMealListAdapter extends RecyclerView.Adapter<SettingsMealVi
     @Override
     public SettingsMealViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         boolean lastItem = list.size() == 1;
-        return new SettingsMealViewHolder(parent, onEditMealClickedListener, onDeleteMealClickedListener, lastItem);
+        return new SettingsMealViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_settings_meal, parent, false
+        ), onEditMealClickedListener, onDeleteMealClickedListener, lastItem);
     }
 
     @Override

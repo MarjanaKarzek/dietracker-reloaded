@@ -18,17 +18,17 @@ import lombok.Value;
 @Value
 @AllArgsConstructor
 public class GroceryDisplayModel implements Parcelable{
-    private int id;
-    private String barcode;
-    private String name;
-    private float calories_per_1U;
-    private float proteins_per_1U;
-    private float carbohydrates_per_1U;
-    private float fats_per_1U;
-    private int type;
-    private int unit_type;
-    private ArrayList<AllergenDisplayModel> allergens;
-    private ArrayList<ServingDisplayModel> servings;
+    public int id;
+    public String barcode;
+    public String name;
+    public float calories_per_1U;
+    public float proteins_per_1U;
+    public float carbohydrates_per_1U;
+    public float fats_per_1U;
+    public int type;
+    public int unit_type;
+    public ArrayList<AllergenDisplayModel> allergens;
+    public ArrayList<ServingDisplayModel> servings;
 
     protected GroceryDisplayModel(Parcel in) {
         id = in.readInt();

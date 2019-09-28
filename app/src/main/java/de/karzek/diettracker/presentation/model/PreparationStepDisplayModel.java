@@ -19,9 +19,9 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 @AllArgsConstructor
 public class PreparationStepDisplayModel implements Parcelable {
-    private int id;
-    private int stepNo;
-    private String description;
+    public int id;
+    public int stepNo;
+    public String description;
 
     private PreparationStepDisplayModel(Parcel in) {
         id = in.readInt();

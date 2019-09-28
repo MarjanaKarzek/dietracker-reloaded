@@ -2,7 +2,8 @@ package de.karzek.diettracker.presentation;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;

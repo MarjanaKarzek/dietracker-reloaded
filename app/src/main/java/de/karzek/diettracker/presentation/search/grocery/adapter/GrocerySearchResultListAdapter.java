@@ -1,12 +1,14 @@
 package de.karzek.diettracker.presentation.search.grocery.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import de.karzek.diettracker.presentation.model.GroceryDisplayModel;
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.search.grocery.GrocerySearchContract;
 import de.karzek.diettracker.presentation.search.grocery.adapter.itemWrapper.GrocerySearchResultItemWrapper;
 import de.karzek.diettracker.presentation.search.grocery.adapter.viewHolder.GrocerySearchDrinkResultViewHolder;
@@ -40,9 +42,13 @@ public class GrocerySearchResultListAdapter extends RecyclerView.Adapter<Recycle
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == GrocerySearchResultItemWrapper.ItemType.FOOD)
-            return new GrocerySearchFoodResultViewHolder(parent, itemOnClickListener);
+            return new GrocerySearchFoodResultViewHolder(LayoutInflater.from(
+                    parent.getContext()).inflate(R.layout.item_grocery_search_food, parent, false
+            ), itemOnClickListener);
         else
-            return new GrocerySearchDrinkResultViewHolder(parent, itemOnClickListener, onAddBottleClickListener, onAddGlassClickListener);
+            return new GrocerySearchDrinkResultViewHolder(LayoutInflater.from(
+                    parent.getContext()).inflate(R.layout.item_grocery_search_drink, parent, false
+            ), itemOnClickListener, onAddBottleClickListener, onAddGlassClickListener);
     }
 
     @Override

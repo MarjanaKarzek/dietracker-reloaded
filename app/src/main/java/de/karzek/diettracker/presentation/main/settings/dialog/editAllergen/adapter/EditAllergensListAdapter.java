@@ -1,12 +1,15 @@
 package de.karzek.diettracker.presentation.main.settings.dialog.editAllergen.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.settings.dialog.editAllergen.adapter.viewHolder.AllergenViewHolder;
 import de.karzek.diettracker.presentation.model.AllergenDisplayModel;
 
@@ -32,7 +35,7 @@ public class EditAllergensListAdapter extends RecyclerView.Adapter<AllergenViewH
     @NonNull
     @Override
     public AllergenViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new AllergenViewHolder(parent, onItemCheckedChangeListener);
+        return new AllergenViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_dialog_checkbox, parent, false), onItemCheckedChangeListener);
     }
 
     @Override

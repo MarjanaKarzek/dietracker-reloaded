@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.search.recipe.recipeEditDetails.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.search.recipe.recipeEditDetails.adapter.itemWrapper.RecipeEditDetailsViewItemWrapper;
 import de.karzek.diettracker.presentation.search.recipe.recipeEditDetails.adapter.viewHolder.RecipeEditDetailsAddViewHolder;
 import de.karzek.diettracker.presentation.search.recipe.recipeEditDetails.adapter.viewHolder.RecipeEditDetailsCaloryAndMacroDetailsViewHolder;
@@ -57,21 +60,37 @@ public class RecipeEditDetailsViewListAdapter extends RecyclerView.Adapter<Recyc
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case RecipeEditDetailsViewItemWrapper.ItemType.PHOTO_VIEW:
-                return new RecipeEditDetailsPhotoViewHolder(parent);
+                return new RecipeEditDetailsPhotoViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_photo, parent, false
+                ));
             case RecipeEditDetailsViewItemWrapper.ItemType.INGREDIENTS_TITLE_VIEW:
-                return new RecipeEditDetailsIngredientsAndPortionsTitleViewHolder(parent, onPortionChangedListener, onExpandNutritionDetailsViewClickListener);
+                return new RecipeEditDetailsIngredientsAndPortionsTitleViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_edit_details_ingredients_title_and_portions, parent, false
+                ), onPortionChangedListener, onExpandNutritionDetailsViewClickListener);
             case RecipeEditDetailsViewItemWrapper.ItemType.CALORY_DETAILS_VIEW:
-                return new RecipeEditDetailsCaloryDetailsViewHolder(parent);
+                return new RecipeEditDetailsCaloryDetailsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_calory_details, parent, false
+                ));
             case RecipeEditDetailsViewItemWrapper.ItemType.CALORIES_AND_MACROS_DETAILS_VIEW:
-                return new RecipeEditDetailsCaloryAndMacroDetailsViewHolder(parent);
+                return new RecipeEditDetailsCaloryAndMacroDetailsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_calory_and_macro_details, parent, false
+                ));
             case RecipeEditDetailsViewItemWrapper.ItemType.INGREDIENT_VIEW:
-                return new RecipeEditDetailsIngredientViewHolder(parent, onDeleteIngredientClickListener);
+                return new RecipeEditDetailsIngredientViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_ingredient, parent, false
+                ), onDeleteIngredientClickListener);
             case RecipeEditDetailsViewItemWrapper.ItemType.MEAL_SELECTOR_VIEW:
-                return new RecipeEditDetailsMealSelectorViewHolder(parent, onMealItemSelectedListener);
+                return new RecipeEditDetailsMealSelectorViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_edit_details_meal_selector, parent, false
+                ), onMealItemSelectedListener);
             case RecipeEditDetailsViewItemWrapper.ItemType.DATE_SELECTOR_VIEW:
-                return new RecipeEditDetailsDateSelectorViewHolder(parent, onDateClickListener);
+                return new RecipeEditDetailsDateSelectorViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_edit_details_date_selector, parent, false
+                ), onDateClickListener);
             case RecipeEditDetailsViewItemWrapper.ItemType.ADD_VIEW:
-                return new RecipeEditDetailsAddViewHolder(parent, onSaveRecipeClickedListener);
+                return new RecipeEditDetailsAddViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_save, parent, false
+                ), onSaveRecipeClickedListener);
         }
         return null;
     }

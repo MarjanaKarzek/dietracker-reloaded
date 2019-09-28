@@ -1,14 +1,16 @@
 package de.karzek.diettracker.presentation.main.cookbook.dialog.filterOptionsDialog.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.dialog.filterOptionsDialog.adapter.viewHolder.RecipeFilterOptionViewHolder;
-import de.karzek.diettracker.presentation.model.AllergenDisplayModel;
 
 /**
  * Created by MarjanaKarzek on 30.05.2018.
@@ -33,7 +35,9 @@ public class RecipeFilterOptionsListAdapter extends RecyclerView.Adapter<RecipeF
     @NonNull
     @Override
     public RecipeFilterOptionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RecipeFilterOptionViewHolder(parent, onItemCheckedChangeListener);
+        return new RecipeFilterOptionViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_dialog_checkbox, parent, false
+        ), onItemCheckedChangeListener);
     }
 
     @Override

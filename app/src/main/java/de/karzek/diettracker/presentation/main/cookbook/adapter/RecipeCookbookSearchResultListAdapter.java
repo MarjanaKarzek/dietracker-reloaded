@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.cookbook.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.adapter.viewHolder.RecipeCookbookSearchResultViewHolder;
 import de.karzek.diettracker.presentation.model.RecipeDisplayModel;
 
@@ -40,7 +43,9 @@ public class RecipeCookbookSearchResultListAdapter extends RecyclerView.Adapter<
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RecipeCookbookSearchResultViewHolder(parent, onRecipeItemClickedListener, onRecipeAddPortionClickedListener, onRecipeEditClickedListener, onRecipeDeleteClickedListener);
+        return new RecipeCookbookSearchResultViewHolder(LayoutInflater.from(
+                parent.getContext()).inflate(R.layout.item_cookbook_recipe, parent, false
+        ), onRecipeItemClickedListener, onRecipeAddPortionClickedListener, onRecipeEditClickedListener, onRecipeDeleteClickedListener);
     }
 
     @Override

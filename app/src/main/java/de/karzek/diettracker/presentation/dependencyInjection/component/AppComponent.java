@@ -8,7 +8,6 @@ import de.karzek.diettracker.presentation.dependencyInjection.component.activity
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.GroceryDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.GrocerySearchComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.MainComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.OnboardingComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeEditDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeManipulationComponent;
@@ -30,7 +29,6 @@ import de.karzek.diettracker.presentation.dependencyInjection.module.activityMod
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.GroceryDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.GrocerySearchModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.MainModule;
-import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.OnboardingModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeEditDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeManipulationModule;
@@ -98,8 +96,6 @@ public interface AppComponent {
     RecipeEditDetailsComponent plus(RecipeEditDetailsModule module);
 
     AutomatedIngredientSearchComponent plus(AutomatedIngredientSearchModule module);
-
-    OnboardingComponent plus(OnboardingModule module);
 
     //fragments
 

@@ -1,11 +1,14 @@
 package de.karzek.diettracker.presentation.main.cookbook.recipeDetails.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import de.karzek.diettracker.R;
 import de.karzek.diettracker.presentation.main.cookbook.recipeDetails.adapter.itemWrapper.RecipeDetailsViewItemWrapper;
 import de.karzek.diettracker.presentation.main.cookbook.recipeDetails.adapter.viewHolder.RecipeDetailsCaloryAndMacroDetailsViewHolder;
 import de.karzek.diettracker.presentation.main.cookbook.recipeDetails.adapter.viewHolder.RecipeDetailsCaloryDetailsViewHolder;
@@ -40,21 +43,37 @@ public class RecipeDetailsViewListAdapter extends RecyclerView.Adapter<RecyclerV
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         switch (viewType) {
             case RecipeDetailsViewItemWrapper.ItemType.PHOTO_VIEW:
-                return new RecipeDetailsPhotoViewHolder(parent);
+                return new RecipeDetailsPhotoViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_photo, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.INGREDIENTS_TITLE_VIEW:
-                return new RecipeDetailsIngredientsAndPortionsTitleViewHolder(parent, onExpandNutritionDetailsViewClickListener);
+                return new RecipeDetailsIngredientsAndPortionsTitleViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_ingredients_title_and_portions, parent, false
+                ), onExpandNutritionDetailsViewClickListener);
             case RecipeDetailsViewItemWrapper.ItemType.CALORY_DETAILS_VIEW:
-                return new RecipeDetailsCaloryDetailsViewHolder(parent);
+                return new RecipeDetailsCaloryDetailsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_calory_details, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.CALORIES_AND_MACROS_DETAILS_VIEW:
-                return new RecipeDetailsCaloryAndMacroDetailsViewHolder(parent);
+                return new RecipeDetailsCaloryAndMacroDetailsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_calory_and_macro_details, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.INGREDIENT_VIEW:
-                return new RecipeDetailsIngredientViewHolder(parent);
+                return new RecipeDetailsIngredientViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_ingredient, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.TITLE_VIEW:
-                return new RecipeDetailsTitleViewHolder(parent);
+                return new RecipeDetailsTitleViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_title, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.PREPARATION_STEP_VIEW:
-                return new RecipeDetailsPreparationStepViewHolder(parent);
+                return new RecipeDetailsPreparationStepViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_preparation_step, parent, false
+                ));
             case RecipeDetailsViewItemWrapper.ItemType.MEALS_VIEW:
-                return new RecipeDetailsMealsViewHolder(parent);
+                return new RecipeDetailsMealsViewHolder(LayoutInflater.from(
+                        parent.getContext()).inflate(R.layout.viewholder_recipe_details_meal_list, parent, false
+                ));
         }
         return null;
     }
