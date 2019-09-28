@@ -17,7 +17,7 @@ public interface MainContract {
 
     interface View extends BaseView<Presenter> {
 
-        void showOnboardingScreen(int onboardingTag);
+        void showOnboardingScreen();
 
     }
 

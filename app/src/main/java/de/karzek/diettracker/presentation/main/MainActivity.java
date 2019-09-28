@@ -7,24 +7,21 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.karzek.diettracker.R;
+import de.karzek.diettracker.designsystem.dialog.Dialog;
 import de.karzek.diettracker.presentation.TrackerApplication;
 import de.karzek.diettracker.presentation.common.BaseActivity;
-import de.karzek.diettracker.presentation.main.cookbook.CookbookFragment;
 import de.karzek.diettracker.presentation.custom.CustomBottomNavigationView;
-import de.karzek.diettracker.presentation.main.diary.meal.GenericMealFragment;
-import de.karzek.diettracker.presentation.model.MealDisplayModel;
-import de.karzek.diettracker.presentation.onboarding.OnboardingActivity;
-import de.karzek.diettracker.presentation.util.ViewUtils;
+import de.karzek.diettracker.presentation.main.cookbook.CookbookFragment;
 import de.karzek.diettracker.presentation.main.diary.DiaryFragment;
+import de.karzek.diettracker.presentation.main.diary.meal.GenericMealFragment;
 import de.karzek.diettracker.presentation.main.home.HomeFragment;
 import de.karzek.diettracker.presentation.main.settings.SettingsFragment;
+import de.karzek.diettracker.presentation.util.ViewUtils;
 
 import static de.karzek.diettracker.presentation.main.MainContract.FragmentIndex.FRAGMENT_COOKBOOK;
 import static de.karzek.diettracker.presentation.main.MainContract.FragmentIndex.FRAGMENT_DIARY;
@@ -147,8 +144,11 @@ public class MainActivity extends BaseActivity implements MainContract.View, Dia
 
 
     @Override
-    public void showOnboardingScreen(int onboardingTag) {
-        startActivity(OnboardingActivity.newIntent(this, onboardingTag));
+    public void showOnboardingScreen() {
+        new Dialog.Builder(this)
+                .setMessage(R.string.onboarding_text_welcome)
+                .setPositiveText(R.string.lets_go_button)
+                .show();
     }
 
 }

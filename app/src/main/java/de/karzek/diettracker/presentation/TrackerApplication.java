@@ -9,48 +9,46 @@ import com.squareup.leakcanary.RefWatcher;
 
 import de.karzek.diettracker.ConfigurationManager;
 import de.karzek.diettracker.presentation.dependencyInjection.component.AppComponent;
+import de.karzek.diettracker.presentation.dependencyInjection.component.DaggerAppComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.AutomatedIngredientSearchComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.BarcodeScannerComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.GroceryDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.GrocerySearchComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.MainComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.OnboardingComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeEditDetailsComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeManipulationComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.RecipeSearchComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.activityComponent.SplashComponent;
+import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.EditAllergensDialogComponent;
+import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.EditMealsDialogComponent;
+import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.RecipeFilterOptionsDialogComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.CookbookComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.DaggerAppComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.DiaryComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.GenericDrinkComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.GenericMealComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.HomeComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.component.fragmentComponent.SettingsComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.EditAllergensDialogComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.EditMealsDialogComponent;
-import de.karzek.diettracker.presentation.dependencyInjection.component.dialogComponent.RecipeFilterOptionsDialogComponent;
 import de.karzek.diettracker.presentation.dependencyInjection.module.AndroidModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.AutomatedIngredientSearchModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.BarcodeScannerModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.GroceryDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.GrocerySearchModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.MainModule;
-import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.OnboardingModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeEditDetailsModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeManipulationModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.RecipeSearchModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.activityModules.SplashModule;
+import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.EditAllergensDialogModule;
+import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.EditMealsDialogModule;
+import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.RecipeFilterOptionsDialogModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.CookbookModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.DiaryModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.GenericDrinkModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.GenericMealModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.HomeModule;
 import de.karzek.diettracker.presentation.dependencyInjection.module.fragmentModule.SettingsModule;
-import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.EditAllergensDialogModule;
-import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.EditMealsDialogModule;
-import de.karzek.diettracker.presentation.dependencyInjection.module.dialogModules.RecipeFilterOptionsDialogModule;
 
 /**
  * Created by MarjanaKarzek on 28.04.2018.
@@ -74,7 +72,6 @@ public class TrackerApplication extends Application {
     private RecipeSearchComponent recipeSearchComponent;
     private RecipeEditDetailsComponent recipeEditDetailsComponent;
     private AutomatedIngredientSearchComponent automatedIngredientSearchComponent;
-    private OnboardingComponent onboardingComponent;
 
     //fragments
     private HomeComponent homeComponent;
@@ -202,14 +199,6 @@ public class TrackerApplication extends Application {
         return automatedIngredientSearchComponent;
     }
 
-    public OnboardingComponent createOnboardingComponent() {
-        if (onboardingComponent != null) {
-            return onboardingComponent;
-        }
-        onboardingComponent = appComponent.plus(new OnboardingModule());
-        return onboardingComponent;
-    }
-
     //fragments
 
     public HomeComponent createHomeComponent() {
@@ -328,10 +317,6 @@ public class TrackerApplication extends Application {
 
     public void releaseAutomatedIngredientSearchComponent() {
         automatedIngredientSearchComponent = null;
-    }
-
-    public void releaseOnboardingComponent() {
-        onboardingComponent = null;
     }
 
     //fragments
